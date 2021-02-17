@@ -1,0 +1,19 @@
+extends ../layout
+
+block content
+    h1 title 
+
+    if ery !== undefined  
+        each message in ery.errors 
+          p=message
+
+
+    form(method='post')
+        p
+            label Title
+            input(type='text' name='title')
+        p
+            label Desription
+            textarea(name='description')
+        p
+            input(type='submit' valur='save')  
